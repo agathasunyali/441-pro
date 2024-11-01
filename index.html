@@ -223,16 +223,53 @@ button:hover {
 .mySlides img{
     margin-left: 15%;
 }
+
+
+
+/* Reset the list style */
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333; /* Dark background for the navbar */
+}
+
+/* Style the links inside the navbar */
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+/* Change the color of links on hover */
+.navbar li a:hover {
+    background-color: #111; /* Darker shade on hover */
+}
+
+/* Responsive layout - makes the navbar a vertical stack on small screens */
+@media screen and (max-width: 600px) {
+    .navbar li {
+        float: none;
+    }
+}
     </style>
 </head>
 <body>
-        <div class="navcontain">      <!--a navbar-->
+<div class="navcontain">      <!--a navbar-->
         <ul class="navbar">
             <li><a href="About.html">About US</a></li>
             <li><a href="cart.html">Courseware</a></li>
             <li><a href="showcase.html">Showcase</a></li>
         </ul>
-    </div>
+</div>
     <div class="hero-banner">
         <div class="hero-content">
             <h1>Welcome to Our Website</h1>
