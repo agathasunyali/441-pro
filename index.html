@@ -5,6 +5,226 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+/* General body styles */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+/* Hero banner styles */
+.hero-banner {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+/* Hero content styles */
+.hero-content {
+    text-align: center;
+    color: #fff;
+    padding: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    margin: 0;
+    font-size: 3em;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.hero-button {
+    display: inline-block;
+    font-size: 1em;
+    color: #fff;
+    background: #007bff;
+    border: none;
+    padding: 15px 30px;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.hero-button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    max-width: 100%;
+}
+
+/* Slides */
+.mySlides {
+    display: none;
+    width: 100%;
+}
+
+.mySlides img {
+    vertical-align: middle;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 123, 255, 0.5);
+    border: none;
+    outline: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* Dot indicators */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-button {
+        padding: 10px 20px;
+    }
+
+    .prev, .next, .text {
+        font-size: 11px;
+    }
+}
+
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.service {
+    background: #e9ecef;
+    padding: 15px;
+    margin-bottom: 10px;
+    width: calc(33% - 10px);
+    text-align: center;
+}
+
+.service h2 {
+    color: #007bff;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.service p {
+    color: #495057;
+    margin: 5px 0;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.profile {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e9ecef;
+}
+
+.profile h2 {
+    color: #007bff;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.profile p {
+    color: #495057;
+    line-height: 1.6;
+}
+
+.mySlides img{
+    margin-left: 15%;
+}
+    </style>
 </head>
 <body>
     <div class="hero-banner">
@@ -74,6 +294,46 @@
             <button onclick="applyTrial()">Apply for a Free Trial Class</button>
         </div>
     </div>
-    <script src="cart.js"></script>
+    <script>
+        var slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 3000); 
+        }
+    
+        function consult(type) {
+            alert('You have chosen to consult about: ' + type);
+            // Here you would typically handle the consultation logic, like opening a new window or modal
+        }
+    
+        function download(subject) {
+            alert('You have chosen to download: ' + subject + ' material package');
+            // Here you would handle the download logic
+        }
+    
+        function test(subject) {
+            alert('You have chosen to take: ' + subject + ' ability test');
+            // Here you would handle the testing logic
+        }
+    
+        function applyTrial() {
+            alert('You have applied for a trial class');
+            // Here you would handle the application for a trial class
+        }
+    </script>
 </body>
 </html>
