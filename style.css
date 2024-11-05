@@ -495,3 +495,278 @@ button:hover {
 .mySlides img{
     margin-left: 15%;
 }
+
+
+
+/* General body styles */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+        .active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-button {
+        padding: 10px 20px;
+    }
+
+    .prev, .next, .text {
+        font-size: 11px;
+    }
+}
+
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+/* Hero banner styles */
+.hero-banner {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+/* Hero content styles */
+.hero-content {
+    text-align: center;
+    color: #fff;
+    padding: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    margin: 0;
+    font-size: 3em;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.hero-button {
+    display: inline-block;
+    font-size: 1em;
+    color: #fff;
+    background: #007bff;
+    border: none;
+    padding: 15px 30px;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.hero-button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    max-width: 100%;
+}
+
+/* Slides */
+.mySlides {
+    display: none;
+    width: 100%;
+}
+
+.mySlides img {
+    vertical-align: middle;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 123, 255, 0.5);
+    border: none;
+    outline: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* Dot indicators */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+}
+
+
+.service {
+    background: #e9ecef;
+    padding: 15px;
+    margin-bottom: 10px;
+    width: calc(33% - 10px);
+    text-align: center;
+}
+
+.service h2 {
+    color: #007bff;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.service p {
+    color: #495057;
+    margin: 5px 0;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.profile {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e9ecef;
+}
+
+.profile h2 {
+    color: #007bff;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.profile p {
+    color: #495057;
+    line-height: 1.6;
+}
+
+.mySlides img{
+    margin-left: 15%;
+}
+
+
+
+.navcontain {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #8d8d8d;
+    width: 100%;
+    height: 50px;
+    padding: 0 10px;
+  }
+  
+  .navbar {
+    display: flex;
+    flex-wrap: nowrap; 
+    margin: 0 auto; 
+  }
+  ul,li{
+    list-style-type: none;
+  }
+  .navbar li {
+    position: relative;
+    text-align: center; 
+  }
+  
+  .navbar li a {
+    display: block;
+    height: 35px;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar li a:hover {
+    background-color: #555;
+  }
+  
+  
+  .navbar li:not(:last-child) {
+    margin-right: 200px;
+  }
+
+.cartjump{
+    height: 40px;
+    width: 50px;
+    border: none;
+    float: right;
+}
+.cartjump img{
+    height: auto;
+    max-width: 50px;
+}
