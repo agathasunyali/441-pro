@@ -18,7 +18,9 @@
     height: 50px;
     padding: 0 10px;
   }
-  
+  h2 {  
+    font-size: 8px; 
+}
   .navbar {
     display: flex;
     flex-wrap: nowrap; 
